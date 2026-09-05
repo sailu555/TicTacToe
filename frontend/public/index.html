@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Tic Tac Toe</h1>
+    <p class="subtitle">Node.js + TypeScript frontend &middot; .NET Web API backend</p>
+
+    <div id="status" class="status">Loading…</div>
+    <div class="game-layout">
+      <div id="board" class="board" aria-label="Tic Tac Toe board"></div>
+      <section class="move-history" aria-label="Move History">
+        <h2>Move History</h2>
+        <ol id="move-history-list" class="move-history-list"></ol>
+      </section>
+    </div>
+    <div class="controls">
+      <button id="mode-two-player" type="button">2 Player</button>
+      <button id="mode-vs-computer" type="button">vs Computer</button>
+      <button id="undo" type="button">Undo Move</button>
+      <button id="reset" type="button">Reset Board</button>
+    </div>
+    
+    <section class="scoreboard" aria-label="Scoreboard">
+      <h2>Scoreboard</h2>
+      <div class="scoreboard-row">
+        <div class="scoreboard-item">
+          <span class="scoreboard-label">X Wins</span>
+          <span id="score-x" class="scoreboard-value">0</span>
+        </div>
+        <div class="scoreboard-item">
+          <span class="scoreboard-label">O Wins</span>
+          <span id="score-o" class="scoreboard-value">0</span>
+        </div>
+        <div class="scoreboard-item">
+          <span class="scoreboard-label">Draws</span>
+          <span id="score-draws" class="scoreboard-value">0</span>
+        </div>
+      </div>
+      <button id="reset-scoreboard" type="button" class="scoreboard-reset">Reset Scoreboard</button>
+    </section>
+
+    
+  </main>
+  <script src="client.js"></script>
+</body>
+</html>

@@ -99,6 +99,10 @@ h1 {
   cursor: default;
 }
 
+.cell:not(:empty) {
+  cursor: not-allowed;
+}
+
 .cell.winning-cell {
   background: #dcfce7;
   color: var(--winner);

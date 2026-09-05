@@ -104,7 +104,8 @@ function renderBoard(game: GameState): void {
     cellEl.type = "button";
     cellEl.className = "cell";
     cellEl.textContent = cellLabel(cellValue);
-    cellEl.disabled = cellValue !== CellValue.Empty || game.isGameOver;
+    //cellEl.disabled = cellValue !== CellValue.Empty || game.isGameOver;
+    cellEl.disabled = game.isGameOver;
 
     if (game.winningLine?.includes(index)) {
       cellEl.classList.add("winning-cell");
@@ -220,6 +221,12 @@ async function createNewGame(mode: GameMode): Promise<void> {
 async function handleMove(row: number, col: number): Promise<void> {
   if (!currentGame || currentGame.isGameOver) return;
 
+  const index = row * 3 + col;
+  if (currentGame.board[index] !== CellValue.Empty) {
+    statusEl.textContent = "That cell is already taken — pick an empty one.";
+    statusEl.className = "status status-error";
+    return;
+  }
   try {
     const response = await fetch(`${API_BASE_URL}/${currentGame.id}/move`, {
       method: "POST",

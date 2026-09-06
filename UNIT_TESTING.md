@@ -12,17 +12,11 @@ how to run it, and fixes for issues you may hit along the way.
 
 ## One-time setup
 
-If you haven't created the test project yet:
-
-```bash
-cd backend
-dotnet new xunit -n TicTacToe.Api.Tests
-cd TicTacToe.Api.Tests
-dotnet add reference ../TicTacToe.Api/TicTacToe.Api.csproj
-```
-
-Delete the auto-generated `UnitTest1.cs` and place `GameServiceTests.cs` and
-`ScoreboardServiceTests.cs` in that folder instead.
+None needed — the test project (`TicTacToe.Api.Tests/`) already exists in
+the repository, alongside `GameServiceTests.cs` and
+`ScoreboardServiceTests.cs`. If you're cloning this repo fresh, `dotnet
+test` (below) restores and builds everything automatically; there's no
+separate scaffolding step to run.
 
 ## Running the tests
 

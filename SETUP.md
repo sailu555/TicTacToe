@@ -26,8 +26,15 @@ Browser (Node/TypeScript frontend, http://localhost:3000)
 | Tool | Version | Notes |
 |---|---|---|
 | .NET SDK | 10.0.x | Must match (or be compatible with) the runtime installed on your machine. The project targets `net10.0`. |
+
+- **.NET 10 SDK** — https://dotnet.microsoft.com/download/dotnet/10.0
+  (the project targets `net10.0`; if you have a different major version
+  installed, either install .NET 10 alongside it, or edit
+  `<TargetFramework>` in `TicTacToe.Api.csproj` to match what you have
+
 | Node.js | 18+ | 22.x also verified working |
 | npm | Bundled with Node.js | Used for TypeScript compilation only — no runtime npm packages are required to run the app |
+Install Node.js if not already installed. https://nodejs.org/en/download/
 
 > **Framework version mismatch:** if `dotnet run` complains that the
 > required framework version isn't installed, check your installed

@@ -8,15 +8,18 @@ the API for every move.
 ```
 tictactoe-app/
 ├── backend/
-│   └── TicTacToe.Api/          .NET 10 Web API
-│       ├── Controllers/        GameController — REST endpoints
-│       ├── Models/             GameState, MoveRequest, etc.
-│       ├── Services/           GameService — in-memory game store + rules
-│       └── Program.cs          Hosting, CORS, Swagger setup
-└── frontend/                   Node.js + TypeScript
+│   ├── TicTacToe.Api/                    .NET 10 Web API
+│   │   ├── Controllers/                  GameController, ScoreboardController — REST endpoints
+│   │   ├── Models/                       GameState, MoveRequest, ScoreboardState, etc.
+│   │   ├── Services/                     GameService, ScoreboardService — in-memory state + rules
+│   │   └── Program.cs                    Hosting, CORS, Swagger setup
+│   └── TicTacToe.Api.Tests/              xUnit test project
+│       ├── GameServiceTests.cs           Moves, win/draw detection, undo, computer opponent
+│       └── ScoreboardServiceTests.cs     Scoreboard counting, session isolation, reset behavior
+└── frontend/                             Node.js + TypeScript
     ├── src/
-    │   ├── server.ts           Static file server (Node http/fs, no deps)
-    │   └── client.ts           Browser game client (fetch-based, talks to API)
+    │   ├── server.ts                     Static file server (Node http/fs, no deps)
+    │   └── client.ts                     Browser game client (fetch-based, talks to API)
     └── public/
         ├── index.html
         └── styles.css
@@ -137,6 +140,13 @@ creates a new game against the API and lets you play.
   `ConcurrentDictionary`. Games are lost on API restart and won't be shared
   across multiple API instances — swap in Redis or a database if you need
   either of those for a real deployment.
+
+## Documentation
+
+- [SETUP.md](./SETUP.md) — installation and configuration
+- [RUNNING_AND_TESTING.md](./RUNNING_AND_TESTING.md) — running the app and manual test checklist
+- [API_CONTRACT.md](./API_CONTRACT.md) — full endpoint and data model reference
+- [UNIT_TESTING.md](./UNIT_TESTING.md) — running the xUnit backend test suite
 
 ## Future Improvements 
 

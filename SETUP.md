@@ -26,8 +26,6 @@ Browser (Node/TypeScript frontend, http://localhost:3000)
 | Tool | Version | Notes |
 |---|---|---|
 | .NET SDK | 10.0.x https://dotnet.microsoft.com/download/dotnet/10.0 | Must match (or be compatible with) the runtime installed on your machine. The project targets `net10.0`. |
-
-
 | Node.js | 18+ https://nodejs.org/en/download/ | 22.x also verified working |
 | npm | Bundled with Node.js | Used for TypeScript compilation only — no runtime npm packages are required to run the app |
 

@@ -8,7 +8,7 @@ the API for every move.
 ```
 tictactoe-app/
 ├── backend/
-│   └── TicTacToe.Api/          .NET 8 Web API
+│   └── TicTacToe.Api/          .NET 10 Web API
 │       ├── Controllers/        GameController — REST endpoints
 │       ├── Models/             GameState, MoveRequest, etc.
 │       ├── Services/           GameService — in-memory game store + rules
@@ -93,7 +93,11 @@ tictactoe-app/
 
 ## Prerequisites
 
-- **.NET 8 SDK** — https://dotnet.microsoft.com/download
+- **.NET 10 SDK** — https://dotnet.microsoft.com/download/dotnet/10.0
+  (the project targets `net10.0`; if you have a different major version
+  installed, either install .NET 10 alongside it, or edit
+  `<TargetFramework>` in `TicTacToe.Api.csproj` to match what you have
+
 - **Node.js 18+** and npm
 
 ## Running the backend
@@ -134,11 +138,13 @@ creates a new game against the API and lets you play.
   across multiple API instances — swap in Redis or a database if you need
   either of those for a real deployment.
 
-## Extending it
+## Future Improvements 
 
-- Add a "Play again" flow that reuses `/reset` instead of creating a brand
-  new game id.
-- Add a difficulty setting for the computer opponent (e.g. an "Easy" mode
-  that occasionally picks a random move instead of the optimal one).
-- Persist finished games (winner, timestamp) to a database for a match
-  history view.
+This is just a priliminary version of the project. Below are some features to work on next. 
+**Persistent Storage** : Currently the results are all stored in in-memory. To have the results stored in a database is a logical enhancement for the results to be available post the session termination.
+
+**Timed Play** : The moves are not currently timed. A player should be allowed to make a move within a set specific timer and that timer can be configured based on the complexity or level or allow the user to configure.
+
+
+
+

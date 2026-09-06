@@ -150,7 +150,9 @@ This is just a priliminary version of the project. Below are some features to wo
 
 **UI Enhancements**: Overal UI elements can be reordered within the layout & enhanced based on user feedback around usage. 
 
-**Containerization**: Application can be containerized with Docker to ensure that there are no setup issues for easy maintainability
+## Containerization
+
+If some one has a Docker setup up & running and would want to try via Docker files, there is a supporting document. Please refer to [DOCKER.MD](./DOCKER.md)for the same.
 
 
 

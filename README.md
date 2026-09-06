@@ -140,11 +140,17 @@ creates a new game against the API and lets you play.
 
 ## Future Improvements 
 
-This is just a priliminary version of the project. Below are some features to work on next. 
+This is just a priliminary version of the project. Below are some features to work on next.
+
 **Persistent Storage** : Currently the results are all stored in in-memory. To have the results stored in a database is a logical enhancement for the results to be available post the session termination.
 
 **Timed Play** : The moves are not currently timed. A player should be allowed to make a move within a set specific timer and that timer can be configured based on the complexity or level or allow the user to configure.
 
+**Coach Mode** : In the VsComputer play mode when the player is trying to make a move, there should be a indication around whether this can be tending towards a winning move or not. Basically guide a new player to see how to play better against computer. 
+
+**UI Enhancements**: Overal UI elements can be reordered within the layout & enhanced based on user feedback around usage. 
+
+**Containerization**: Application can be containerized with Docker to ensure that there are no setup issues for easy maintainability
 
 
 

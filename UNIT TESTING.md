@@ -1,4 +1,4 @@
-# Tic Tac Toe — Running the Tests
+# Tic Tac Toe — Running the Unit Tests
 
 Covers the `TicTacToe.Api.Tests` project: what it tests, how to set it up,
 how to run it, and fixes for issues you may hit along the way.

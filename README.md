@@ -152,7 +152,7 @@ This is just a priliminary version of the project. Below are some features to wo
 
 ## Containerization
 
-If some one has a Docker setup up & running and would want to try via Docker files, there is a supporting document. Please refer to [DOCKER.MD](./DOCKER.md)for the same.
+If someone has Docker installed & running and would want to try using the Docker setup, there is a supporting document. Please refer to [DOCKER.MD](./DOCKER.md) for the same.
 
 
 

@@ -68,12 +68,3 @@ docker compose down
   docker compose up --build frontend
   ```
 
-## Honesty note
-
-This Docker setup was written carefully based on standard multi-stage
-build patterns for .NET 10 and Node, but **has not been run/tested** in
-the environment this project was built in (no Docker daemon was available
-there). If `docker compose up --build` errors on your machine, share the
-exact output and it can be debugged from there — the same way earlier
-`.NET`-specific issues (framework version mismatches, file-lock errors)
-were resolved in this project.
